@@ -1,6 +1,4 @@
-## [STEP 1]
 # Define classes to represent currencies
-
 class Currency:
     unit_name = "Currency"
     base_rate = 1
@@ -31,7 +29,6 @@ class Currency:
         value_at_reference_rate = value_in_currency / result_currency_reference.rate
         return result_currency_reference(value_at_reference_rate)
 
-# Class Dollar's exchange rate should be 20 units of Currency.
 class Dollar(Currency):
     unit_name = "Dollar"
     rate = 20
@@ -39,7 +36,6 @@ class Dollar(Currency):
     def __init__(self, value):
         super().__init__(value)
 
-# Class Yuan's exchange rate should be 8 units of Currency.
 class Yuan(Currency):
     unit_name = "Yuan"
     rate = 8
@@ -50,7 +46,6 @@ class Yuan(Currency):
     def __str__(self):
         return "{} {}".format(self.value,self.unit_name)
 
-# class Pound's exchange rate should be 15 units of Currency.
 class Pound(Currency):
     unit_name = "Pound"
     rate = 15
@@ -58,9 +53,7 @@ class Pound(Currency):
     def __init__(self, value):
         super().__init__(value)
 
-## [STEP 2]
 # Define code for a class Bank
-
 class Bank:
 
     def __init__(self, name, currency, init_value=0):
