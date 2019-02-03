@@ -58,7 +58,17 @@ class Bank:
 
     def __init__(self, name, currency, init_value=0):
         self.name = name
-        self.unit = currency
+        if isinstance(currency,type(Currency)):
+            self.unit = currency
+        else:
+            if currency == "Dollar":
+                self.unit = Dollar
+            elif currency == "Yuan":
+                self.unit = Yuan
+            elif currency == "Pound":
+                self.unit = Pound
+            else:
+                self.unit = Currency
         if self.unit == Dollar:
             self.current_account = Dollar(init_value)
         elif self.unit == Yuan:
@@ -78,3 +88,6 @@ class Bank:
             return "successful deposit"
         else:
             return "ERROR: cannot deposit that currency."
+
+bank = Bank("Suzie","Dollar")
+print(type(bank.unit))
