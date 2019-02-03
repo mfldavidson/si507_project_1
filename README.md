@@ -11,7 +11,7 @@ This program in SI507_project1.py is a Flask app that uses classes defined in la
 
 ### The routes available in the banking app include:
 - The home route (/) welcomes the user to the banking application but does not do anything else.
-- The route bank/<bankname> creates an instance of class Bank with name <bankname>, currency type Currency, and initial value 0, and returns the string "Welcome to <bankname>".
+- The route `bank/<bankname>` creates an instance of class Bank with name `<bankname>`, currency type Currency, and initial value 0, and returns the string `"Welcome to <bankname>"`.
 - the route `dollar/<amt>` creates an instance of class Dollar with amount `<amt>` and returns the string `"<amt> Dollar"`.
 - the route `pound/<amt>` creates an instance of class Pound with amount `<amt>` and returns the string `"<amt> Pound"`.
 - the route `yuan/<amt>` creates an instance of class Yuan with amount `<amt>` and returns the string `"<amt> Yuan"`.
