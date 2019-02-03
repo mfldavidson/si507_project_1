@@ -46,5 +46,17 @@ def showYuan(amt):
     except:
         return "<h1>Please use a valid integer for the yuan amount</h1>"
 
+@app.route('/bank/<name>/<currency>/<value>')
+def showBankValue(name,currency,value):
+    if currency in ("Dollar","Yuan","Pound","Currency"):
+        try:
+            bank = classes.Bank(name,currency,int(value))
+            return "Welcome to the {} bank! {}".format(bank.name, bank.__str__())
+        except:
+            return "Invalid URL inputs for bank."
+    else:
+        return "Invalid URL inputs for bank."
+
+
 if __name__ == '__main__':
     app.run()
