@@ -14,11 +14,6 @@ def createBankDefault(bankname):
     bank = classes.Bank(bankname, classes.Currency)
     return '<h1>Welcome to {}</h1>'.format(bank.name)
 
-@app.route('/bank/<bankname>/<specific_currency>')
-def createBankSpecified(bankname, specific_currency):
-    bank = classes.Bank(bankname, specific_currency)
-    return '<h1>Welcome to {}</h1>'.format(bank.name)
-
 @app.route('/dollar/<amt>')
 def showDollar(amt):
     try:
