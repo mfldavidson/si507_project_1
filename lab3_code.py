@@ -88,6 +88,3 @@ class Bank:
             return "successful deposit"
         else:
             return "ERROR: cannot deposit that currency."
-
-bank = Bank("Suzie","Dollar")
-print(type(bank.unit))
